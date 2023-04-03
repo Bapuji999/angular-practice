@@ -1,0 +1,49 @@
+<!-- ngIf examle1 -->
+<h1 *ngIf="boolval">I am ngIf examle1</h1>
+<br /><br />
+<button (click)="changeBoolT()">Check ngIf examle1 for true</button>
+<br /><br />
+<button (click)="changeBoolF()">Check ngIf examle1 for false</button>
+<br /><br /><br />
+
+<!-- ngIf examle2 -->
+<h1 *ngIf="bool2Val; else elseBlock">I am ngIf examle2 true.</h1>
+<ng-template #elseBlock>I am ngIf examle2 false.</ng-template>
+<br /><br />
+<button (click)="changeBool2T()">Check ngIf examle2 for true</button>
+<br /><br />
+<button (click)="changeBool2F()">Check ngIf examle2 for false</button>
+<br /><br /><br />
+
+<!-- ngFor example 1 -->
+<h1>ngFor example 1</h1>
+<div *ngFor="let product of products">
+  <div>Product name: {{product.productName}}</div>
+  <div>Product id: {{product.productId}}</div>
+  <br /><br />
+</div>
+
+<!-- ngFor example 2 -->
+<h1>ngFor example 2</h1>
+<div *ngFor="let color of colors">
+  <div [style.backgroundColor]="color.colorName" [style]="'color:skyblue; width:50%;'">
+    {{color.colorName}}
+  </div>
+  <br /><br />
+</div>
+
+<!-- Example for both ngIf and ngFor -->
+<h1>Example for both ngIf and ngFor</h1>
+<input type="text" #box [style]="'width:28%; height: 50px;'"
+  placeholder="Enter value (between 1-9) it will print upto that number">
+<br /><br />
+<button (click)="getValue(box.value); val1=true">Enter</button>
+<br /><br />
+<div *ngIf="val1">
+  <div *ngFor="let number of numbers">
+    <div *ngIf="number.val <= num">
+      <div>Number is: {{number.val}}</div>
+      <br /><br />
+    </div>
+  </div>
+</div>

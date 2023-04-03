@@ -1,0 +1,19 @@
+.ex1{
+    height: 100px;
+    width: 25%;
+    background-color: #B8621B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ex1i{
+    height: 70%;
+    width: 50%;
+    background-color: #27E1C1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #452dff;
+}

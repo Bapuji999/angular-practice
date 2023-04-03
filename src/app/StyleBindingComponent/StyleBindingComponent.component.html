@@ -1,0 +1,32 @@
+<!-- Example of style binding using ngClass -->
+<h1>Example of style binding using ngClass</h1>
+<div [ngClass]="'ex1'">
+  <div [ngClass]="'ex1i'">
+    ngClass
+  </div>
+</div>
+<br /><br />
+
+
+<!-- Example of style binding using ngStyle -->
+<h1>Example of style binding using ngStyle</h1>
+<div [ngStyle]="{ background: '#452dff',
+                  'height': '100px',
+                  'width': '25%',
+                  'display': 'flex',
+                  'justify-content': 'center',
+                  'align-items': 'center'
+                }">
+  <div [ngStyle]="{ background: '#27E1C1',
+                    'height': '70%',
+                    'width': '50%',
+                    'display': 'flex',
+                    'justify-content': 'center',
+                    'align-items': 'center',
+                    color: '#B8621B',
+                    'border-radius': '50%'
+                  }">
+    ngStyle
+  </div>
+</div>
+
